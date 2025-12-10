@@ -32,6 +32,8 @@ public class ApplyServiceTest {
         // 실제 사용하는 키 이름으로 변경해야 합니다.
         redisTemplate.delete("coupon_count");
         redisTemplate.delete("applied_user");
+        // 이전 테스트에서 생성된 쿠폰 데이터 초기화
+        couponRepository.deleteAll();
     }
 
     @Test
